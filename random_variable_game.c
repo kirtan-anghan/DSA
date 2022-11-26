@@ -30,8 +30,5 @@ do
     }
     nuguess++;
 } while (guess != number);
-
-    
-
     return 0;
 }
