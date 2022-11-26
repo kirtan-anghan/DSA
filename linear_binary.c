@@ -39,6 +39,8 @@ int binary(int arr[], int size, int element)
 int main()
 {
       int arr[] = {1, 33, 55, 77, 88, 99, 100, 101};
+      // int * arr;
+      //  arr= (int *)malloc( 100 * sizeof(int));
       int size = sizeof(arr) / sizeof(int);
       int element = 100;
       int b= binary(arr, size, element);
