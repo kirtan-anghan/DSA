@@ -91,21 +91,38 @@ struct node *delete_at_index(struct node *first, int index)
     return first;
 };
 
-struct node *delete_last_node(struct node * first)
+struct node *delete_last_node(struct node *first)
 {
-    struct node* p = first;
-    struct node* q = first->next;
+    struct node *p = first;
+    struct node *q = first->next;
     while (q->next != NULL)
     {
-       p = p->next;
-       q = q->next;
+        p = p->next;
+        q = q->next;
     }
-    p ->next = NULL;
+    p->next = NULL;
     free(q);
     return first;
-    
 };
 
+
+struct node *delete_at_value(struct node *first, int value)
+{
+    struct node *p = first;
+    struct node *q = first->next;
+    int i = 0;
+    while (q->var != value && q->next != NULL){
+        p = p->next;
+        q = q->next;  
+    }
+
+    if (q->var==value )
+     {
+        p->next=q->next;
+        free(q);
+     }
+    return first;
+};
 
 int main()
 {
@@ -114,11 +131,13 @@ int main()
     struct node *second;
     struct node *third;
     struct node *four;
+    struct node *five;
 
     first = (struct node *)malloc(sizeof(struct node));
     second = (struct node *)malloc(sizeof(struct node));
     third = (struct node *)malloc(sizeof(struct node));
     four = (struct node *)malloc(sizeof(struct node));
+    five = (struct node *)malloc(sizeof(struct node));
 
     first->var = 10;
     first->next = second;
@@ -130,18 +149,22 @@ int main()
     third->next = four;
 
     four->var = 66;
-    four->next = NULL;
+    four->next = five;
+
+    five->var = 77;
+    five->next = NULL;
 
     printlist(first);
     printf("\n");
 
     // first = insertat_first(first, 01);
-    // first=insertinindex(first,11,1);
+    // first =insertinindex(first,11,1);
     // first = insertEnd(first,44);
     // first = insertafter(first,second,100);
     // first = delete_first_node(first);
     // first = delete_at_index(first,3);
     // first = delete_last_node(first);
+    // first = delete_at_value(first,66);
 
     printlist(first);
 
