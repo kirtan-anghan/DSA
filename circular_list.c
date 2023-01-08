@@ -70,6 +70,7 @@ int main()
     printlist(head);
     printf("\n");
     head = insert_at_first(head, 01);
+    
     printlist(head);
     return 0;
 }
