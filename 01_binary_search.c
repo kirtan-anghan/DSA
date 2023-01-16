@@ -21,6 +21,8 @@ int binary(int arr[], int size, int element)
       {
             int mid = (low + high) / 2;
             if (arr[mid] == element)
+
+
             {
                   return mid;
             }
@@ -44,6 +46,6 @@ int main()
       int size = sizeof(arr) / sizeof(int);
       int element = 100;
       int b= binary(arr, size, element);
-      printf("%d",b);
+      printf("element %d was found on array index %d   ",element,b);
       return 0;
 }
