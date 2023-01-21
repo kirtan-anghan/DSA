@@ -88,9 +88,10 @@ int main(int argc, char const *argv[])
     top = push(top,02);
     top = push(top,03);
     top = push(top,04);
+    top = push(top,05);
     listtraversal(top);
     int t= pop(top);
-    printf("after pop element %d\n", t);
+    printf("after pop element %d\n \n ", t);
     listtraversal(top);
     int y =peek(1);
     printf("peek %d\n", y);
