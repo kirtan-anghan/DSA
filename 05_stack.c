@@ -74,9 +74,9 @@ int main(int argc, char const *argv[])
     push(sp,04);
     push(sp,05);
     push(sp,06);
-    push(sp,07);
-    push(sp,09);
-    push(sp,10);
+    // push(sp,07);
+    // push(sp,09);
+    // push(sp,10);
     pop(sp);
     printstack(sp);
     return 0;
