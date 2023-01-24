@@ -53,6 +53,14 @@ void enqueue(struct quene *q,int val){
 
 int main(int argc, char const *argv[])
 {
+    struct queue q;
+    q.size=10;
+    q.f=q.r=0;
+    q.arr=(int*)malloc(q.size * sizeof(int));
+
+    enqueue(&q,01);
+    enqueue(&q,03);
+    enqueue(&q,02);
     
     return 0;
 }
