@@ -56,7 +56,7 @@ char pop(struct stack* ptr){
  
 int parenthesisMatch(char * exp){
 
-    struct stack* sp;
+    struct stack* sp = (struct stack*)malloc(sizeof(struct stack));
     sp->size = 100;
     sp->top = -1;
     sp->arr = (char *)malloc(sp->size * sizeof(char));
@@ -85,7 +85,7 @@ int parenthesisMatch(char * exp){
 }
 int main()
 {
-    char * exp = "((8)(*--$$9))";
+    char * exp = "((8)(*--$$)))";
   
     if(parenthesisMatch(exp)){
         printf("The parenthesis is matching");

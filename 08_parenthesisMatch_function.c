@@ -74,7 +74,7 @@ int match(char a, char b){
  
 int parenthesisMatch(char * exp){
     
-    struct stack* sp;
+    struct stack* sp= (struct stack*)malloc(sizeof(struct stack));
     sp->size = 100;
     sp->top = -1;
     sp->arr = (char *)malloc(sp->size * sizeof(char));
@@ -107,7 +107,7 @@ int parenthesisMatch(char * exp){
  
 int main()
 {
-    char * exp = "[4-6]((8){(9-8)})";
+    char * exp = "[4-6]((8){(9-8**)})";
     
     if(parenthesisMatch(exp)){
         printf("The parenthesis is balanced");
