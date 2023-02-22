@@ -158,7 +158,7 @@ int main()
     printf("\n");
 
     // first = insertat_first(first, 01);
-    // first =insertinindex(first,11,1);
+    first =insertinindex(first,11,1);
     // first = insertEnd(first,44);
     // first = insertafter(first,second,100);
     // first = delete_first_node(first);

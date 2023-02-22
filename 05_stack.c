@@ -57,7 +57,7 @@ else{
 }
 }
 void printstack(struct stack *sp){
- for(int j= 0; j <= sp->top; j++){
+ for(int j= 1; j <= sp->top+1; j++){
         printf("the value at position %d is %d\n",j , peek(sp,j));
     }
 }
@@ -77,8 +77,16 @@ int main(int argc, char const *argv[])
     // push(sp,07);
     // push(sp,09);
     // push(sp,10);
-    pop(sp);
+    // pop(sp);
     printstack(sp);
+    // printf("%d",peek(sp , 1));
+    // printf("%d",peek(sp , 2));
+    // printf("%d",peek(sp , 3));
+    // printf("%d",peek(sp , 4));
+    // printf("%d",peek(sp , 5));
+    // printf("%d",peek(sp , 6));
+    // printf("%d",peek(sp , 7));
+
     return 0;
 
 }
